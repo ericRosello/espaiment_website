@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EspaiMent – Opción F · Tierra & Conexión</title>
+  <meta name="description" content="Propuesta F para EspaiMent: Diseño orgánico, cálido y humanizado. Especialistas en EMDR, trauma y bienestar emocional.">
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F6F3EE;
+      --card-bg: #FFFFFF;
+      --clay: #C26D53;
+      --clay-soft: #F9ECE8;
+      --forest: #1F362C;
+      --forest-light: #2E5142;
+      --sage-bg: #EAEFEA;
+      --ink: #1C2420;
+      --muted: #5C6762;
+      --border: #E2DDD5;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
+    h1 { font-size: clamp(3.2rem, 7.5vw, 6rem); }
+    h2 { font-size: clamp(2.3rem, 5vw, 4rem); }
+    h3 { font-size: clamp(1.5rem, 2.8vw, 2.2rem); }
+
+    .wrap { width: min(1200px, 92%); margin-inline: auto; }
+    section { padding: clamp(64px, 8vw, 120px) 0; }
+
+    /* ---- HEADER ---- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(246, 243, 238, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .logo img { height: 48px; width: auto; }
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+    nav a:hover { color: var(--forest); }
+    .btn-cta {
+      background: var(--forest);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-cta:hover { background: var(--clay); }
+
+    /* ---- HERO ---- */
+    .hero {
+      padding-top: clamp(48px, 6vw, 90px);
+    }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+    }
+    .tagline-pill {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--clay);
+    }
+    .hero-p {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin: 24px 0 36px;
+      max-width: 44ch;
+      line-height: 1.65;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-solid {
+      background: var(--clay);
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 99px;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-solid:hover { background: #A7553D; }
+    .btn-outline {
+      border: 1px solid var(--border);
+      padding: 14px 26px;
+      border-radius: 99px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .btn-outline:hover { background: #fff; }
+    .hero-photo-container {
+      position: relative;
+    }
+    .hero-photo-container img {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    /* ---- EMDR INTERACTIVE WIDGET ---- */
+    .emdr-section {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .emdr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 6vw, 80px);
+      align-items: center;
+    }
+    .emdr-canvas-box {
+      background: var(--sage-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .emdr-track {
+      width: 100%;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 60px;
+      margin: 28px 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+    .emdr-dot {
+      width: 44px;
+      height: 44px;
+      background: var(--clay);
+      border-radius: 50%;
+      position: absolute;
+      left: 16px;
+      box-shadow: 0 4px 14px rgba(194, 109, 83, 0.4);
+      transition: left 0.1s linear;
+    }
+    .emdr-btn {
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .emdr-btn:hover { background: var(--forest-light); }
+
+    /* ---- SERVICES ---- */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .topic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .topic-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .topic-body {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .topic-body h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    .topic-body p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+
+    /* ---- TEAM PROFILES ---- */
+    .team-showcase {
+      background: var(--clay-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .team-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+      margin-top: 48px;
+    }
+    .human-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    .human-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .human-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+    .human-content h3 { font-size: 1.8rem; margin-bottom: 4px; }
+    .human-role { color: var(--clay); font-weight: 700; font-size: 0.85rem; }
+    .human-col { font-family: monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 14px; }
+    .human-bio { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+    .human-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+    }
+    .btn-wa-sm {
+      background: #25D366;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ---- CONTACT ---- */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .form-container {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+    }
+    .field {
+      margin-bottom: 20px;
+    }
+    .field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--bg);
+    }
+    .submit-solid {
+      width: 100%;
+      padding: 14px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .submit-solid:hover { background: var(--clay); }
+
+    /* ---- FOOTER ---- */
+    footer {
+      background: #15221C;
+      color: #DDE5E1;
+      padding: 64px 0 32px;
+    }
+    .foot-wrap {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .foot-wrap p { color: #8F9E98; max-width: 42ch; margin-top: 14px; font-size: 0.95rem; }
+    .foot-wrap h5 { color: #fff; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; }
+    .foot-wrap ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; }
+
+    @media (max-width: 900px) {
+      .hero-layout, .emdr-grid, .topics-grid, .team-cards-grid, .contact-layout, .foot-wrap {
+        grid-template-columns: 1fr;
+      }
+      .human-card { grid-template-columns: 1fr; }
+      .human-card img { height: 260px; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap header-inner">
+      <a href="index.html" class="logo">
+        <img src="../images/logo.png" alt="EspaiMent">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#emdr">Terapia EMDR</a></li>
+          <li><a href="#especialidades">Servicios</a></li>
+          <li><a href="#equipo">Terapeutas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="#contacto" class="btn-cta">Reservar Cita</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-layout">
+        <div>
+          <p class="tagline-pill">Centro Sanitario de Psicología · Palma</p>
+          <h1>La salida es <em>hacia dentro</em></h1>
+          <p class="hero-p">
+            Un refugio de bienestar emocional, escucha activa y respeto mutuo. Acompañamos tus procesos vitales con evidencia científica y profunda cercanía humana.
+          </p>
+          <div class="hero-btns">
+            <a href="#contacto" class="btn-solid">Comenzar Mi Proceso</a>
+            <a href="#emdr" class="btn-outline">Descubrir Terapia EMDR</a>
+          </div>
+        </div>
+        <div class="hero-photo-container">
+          <img src="../images/hero-bosque.jpg" alt="EspaiMent Palma">
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE EMDR DEMO -->
+    <section id="emdr" class="emdr-section">
+      <div class="wrap emdr-grid">
+        <div>
+          <p class="tagline-pill">Ciencia & Neurobiología</p>
+          <h2>¿En qué consiste la terapia EMDR?</h2>
+          <p style="color:var(--muted); margin:18px 0; line-height:1.7;">
+            La terapia de <strong>Desensibilización y Reprocesamiento por Movimientos Oculares (EMDR)</strong> es un método validado por la Organización Mundial de la Salud (OMS) para tratar traumas, fobias, apego y dolor emocional bloqueado.
+          </p>
+          <p style="color:var(--muted); line-height:1.7;">
+            Mediante la <em>estimulación bilateral alternada</em> (visual, auditiva o táctil), el cerebro reactiva su capacidad natural de procesar vivencias difíciles, reduciendo la carga de angustia asociada al recuerdo.
+          </p>
+        </div>
+
+        <div class="emdr-canvas-box">
+          <h4 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:6px;">Demostración Bilateral</h4>
+          <p style="font-size:0.85rem; color:var(--muted);">Prueba cómo una oscilación rítmica guía la mirada suavemente:</p>
+          
+          <div class="emdr-track" id="emdrTrack">
+            <div class="emdr-dot" id="emdrDot"></div>
+          </div>
+
+          <button class="emdr-btn" id="startEmdrBtn" onclick="toggleEmdr()">Iniciar demostración (10s)</button>
+          <p id="emdrStatus" style="font-size:0.8rem; color:var(--muted); margin-top:12px;">Pulsa para experimentar el movimiento alternado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="especialidades">
+      <div class="wrap">
+        <div style="max-width:600px; margin-bottom:48px;">
+          <p class="tagline-pill">Atención Especializada</p>
+          <h2>Áreas de acompañamiento</h2>
+        </div>
+
+        <div class="topics-grid">
+          <div class="topic-card">
+            <img src="../images/adultos.jpg" alt="Adultos">
+            <div class="topic-body">
+              <h3>Terapia de Adultos</h3>
+              <p>Ansiedad, depresión, dependencia emocional, procesos de duelo, autoestima y transiciones vitales desafiantes.</p>
+            </div>
+          </div>
+          <div class="topic-card">
+            <img src="../images/jovenes.jpg" alt="Jóvenes">
+            <div class="topic-body">
+              <h3>Jóvenes y Familias</h3>
+              <p>Adolescencia, dificultades relacionales, regulación de emociones, autoconcepto y bullying escolar.</p>
+            </div>
+          </div>
+          <div class="topic-card">
+            <img src="../images/consulta-online.jpg" alt="Parejas">
+            <div class="topic-body">
+              <h3>Terapia de Pareja</h3>
+              <p>Superación de crisis, reconstrucción del vínculo afectivo, asertividad y acuerdos de vida compartida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="equipo" class="team-showcase">
+      <div class="wrap">
+        <div style="max-width:640px; margin-bottom:40px;">
+          <p class="tagline-pill">Equipo Profesional</p>
+          <h2>Psicólogas a tu lado</h2>
+          <p style="color:var(--muted); margin-top:10px;">Profesionales sanitarias colegiadas con postgrados clínicos oficiales y acreditación EMDR.</p>
+        </div>
+
+        <div class="team-cards-grid">
+          <!-- Eva Franco -->
+          <article class="human-card">
+            <img src="../images/eva-franco.jpg" alt="Eva Franco">
+            <div class="human-content">
+              <h3>Eva Franco</h3>
+              <p class="human-role">Directora en EspaiMent</p>
+              <p class="human-col">Col. N.º B-03359</p>
+              <p class="human-bio">"La psicología es una vocación de servicio y rigor. Estoy aquí para que te sientas escuchado y comprendido desde el primer día."</p>
+              <div class="human-actions">
+                <a href="https://wa.me/34698953728" target="_blank" rel="noopener" class="btn-wa-sm">WhatsApp Consulta</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Marina Manzano -->
+          <article class="human-card">
+            <img src="../images/marina-manzano.jpg" alt="Marina Manzano">
+            <div class="human-content">
+              <h3>Marina Manzano</h3>
+              <p class="human-role">Psicóloga Sanitaria</p>
+              <p class="human-col">Col. N.º B-03434</p>
+              <p class="human-bio">"Modelo integrador y centrado en la persona. Acompaño a adultos y parejas con TCC, tercera generación y EMDR."</p>
+              <div class="human-actions">
+                <a href="https://wa.me/34698953728" target="_blank" rel="noopener" class="btn-wa-sm">WhatsApp Consulta</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Catalina Plomer -->
+          <article class="human-card">
+            <img src="../images/catalina-plomer.jpg" alt="Catalina Plomer">
+            <div class="human-content">
+              <h3>Catalina Plomer</h3>
+              <p class="human-role">Psicóloga Sanitaria</p>
+              <p class="human-col">Col. N.º B-02939</p>
+              <p class="human-bio">"Un espacio para comprender lo que ocurre y encontrar nuevas formas de relacionarnos con nosotros mismos y con los demás."</p>
+              <div class="human-actions">
+                <a href="https://wa.me/34698953728" target="_blank" rel="noopener" class="btn-wa-sm">WhatsApp Consulta</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Victoire Caufriez -->
+          <article class="human-card">
+            <img src="../images/victoire-caufriez.jpg" alt="Victoire Caufriez">
+            <div class="human-content">
+              <h3>Victoire Caufriez</h3>
+              <p class="human-role">Psicóloga Sanitaria</p>
+              <p class="human-col">Col. N.º B-03768</p>
+              <p class="human-bio">"Acompaño en ansiedad, autoestima, género y crisis a jóvenes y adultos. Séances en Français et Espagnol."</p>
+              <div class="human-actions">
+                <a href="https://wa.me/34698953728" target="_blank" rel="noopener" class="btn-wa-sm">WhatsApp Consulta</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto">
+      <div class="wrap contact-layout">
+        <div>
+          <p class="tagline-pill">Primer Contacto</p>
+          <h2>Comienza cuando sientas que es el momento</h2>
+          <p style="color:var(--muted); margin:18px 0 28px; line-height:1.7;">
+            La virtud de pedir ayuda se alcanza con el valor de aceptarla. Nos encontramos en Palma de Mallorca y disponibles online para toda España.
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--clay); text-transform:uppercase;">Teléfono</span>
+              <p style="font-size:1.2rem; font-weight:700;"><a href="tel:+34698953728">698 953 728</a></p>
+            </div>
+            <div>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--clay); text-transform:uppercase;">Email</span>
+              <p style="font-weight:600;"><a href="mailto:espaiment.info@gmail.com">espaiment.info@gmail.com</a></p>
+            </div>
+            <div>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--clay); text-transform:uppercase;">Dirección</span>
+              <p>Carrer del Baró de Pinopar, 7A, 3°A, 07012 Palma</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form onsubmit="handleContact(event)">
+            <div class="field">
+              <label for="c-nombre">Nombre y Apellidos</label>
+              <input type="text" id="c-nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label for="c-email">Correo Electrónico</label>
+              <input type="email" id="c-email" required placeholder="tucorreo@ejemplo.com">
+            </div>
+            <div class="field">
+              <label for="c-tel">Teléfono</label>
+              <input type="tel" id="c-tel" placeholder="Tu número">
+            </div>
+            <div class="field">
+              <label for="c-motivo">¿Qué te gustaría trabajar?</label>
+              <textarea id="c-motivo" rows="3" placeholder="Cuéntanos brevemente cómo te sientes..."></textarea>
+            </div>
+            <button type="submit" class="submit-solid">Enviar Mensaje Confidencial</button>
+            <p id="cStatus" style="display:none; color:var(--forest); font-weight:700; text-align:center; margin-top:14px;">
+              ✓ Gracias por escribirnos. Te responderemos con la mayor delicadeza en breve.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-wrap">
+        <div>
+          <img src="../images/logo-vertical-claro.png" alt="EspaiMent" style="height:52px; width:auto;">
+          <p>
+            Centro de bienestar psicológico en Palma de Mallorca. Rigor profesional, calidez humana y enfoque integrador con terapia EMDR.
+          </p>
+        </div>
+        <div>
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="#emdr">Terapia EMDR</a></li>
+            <li><a href="#especialidades">Servicios</a></li>
+            <li><a href="#equipo">Terapeutas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="tel:+34698953728">698 953 728</a></li>
+            <li><a href="mailto:espaiment.info@gmail.com">espaiment.info@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/espaiment/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let emdrInterval = null;
+    function toggleEmdr() {
+      const dot = document.getElementById('emdrDot');
+      const track = document.getElementById('emdrTrack');
+      const btn = document.getElementById('startEmdrBtn');
+      const status = document.getElementById('emdrStatus');
+      
+      if (emdrInterval) {
+        clearInterval(emdrInterval);
+        emdrInterval = null;
+        btn.textContent = "Iniciar demostración (10s)";
+        status.textContent = "Demostración pausada.";
+        return;
+      }
+
+      const max = track.clientWidth - 76;
+      let pos = 16;
+      let dir = 1;
+      let count = 0;
+      btn.textContent = "Pausar";
+      status.textContent = "Sigue la esfera suavemente con la mirada...";
+
+      emdrInterval = setInterval(() => {
+        pos += dir * 14;
+        if (pos >= max) {
+          pos = max;
+          dir = -1;
+        } else if (pos <= 16) {
+          pos = 16;
+          dir = 1;
+        }
+        dot.style.left = pos + 'px';
+        count += 20;
+
+        if (count >= 10000) {
+          clearInterval(emdrInterval);
+          emdrInterval = null;
+          btn.textContent = "Volver a iniciar";
+          status.textContent = "Demostración completada. En terapia, se pautan series breves adaptadas a tu comodidad.";
+        }
+      }, 20);
+    }
+
+    function handleContact(e) {
+      e.preventDefault();
+      document.getElementById('cStatus').style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
