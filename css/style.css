@@ -30,7 +30,7 @@ section { padding: clamp(56px, 8vw, 110px) 0; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(246,246,240,.88); backdrop-filter: blur(12px); transition: box-shadow .3s; }
 .site-header.scrolled { box-shadow: 0 2px 18px rgba(58,42,30,.09); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-.logo img { height: 54px; width: auto; }
+.logo img { height: 56px; width: auto; } /* horizontal logo, transparent background */
 .menu { display: flex; gap: 4px; list-style: none; padding: 0; }
 .menu a { display: block; padding: 8px 18px; border-radius: 99px; text-decoration: none; font-weight: 600; font-size: .95rem; transition: background .2s; }
 .menu a:hover { background: var(--sand); }
@@ -121,9 +121,11 @@ section { padding: clamp(56px, 8vw, 110px) 0; }
 .foot a { text-decoration: none; }
 .foot a:hover { text-decoration: underline; }
 .foot-logo { text-align: center; }
-/* the logo is navy, so it sits on a light badge to stay readable on the dark footer */
-.foot-logo img { display: inline-block; height: 64px; width: auto; padding: 10px 20px; background: var(--bg); border-radius: 16px; }
+/* stacked logo, light-text version (logo-vertical-claro.png) so it reads on the dark footer */
+.foot-logo img { display: inline-block; height: 120px; width: auto; }
 .foot-logo a { display: block; margin-top: 16px; }
+.ig { opacity: .85; transition: opacity .2s; }
+.ig:hover { opacity: 1; text-decoration: none; }
 .footer address { font-style: normal; line-height: 1.8; }
 .copy { margin-top: 48px; text-align: center; font-size: .85rem; opacity: .6; }
 @media (max-width: 820px) {
