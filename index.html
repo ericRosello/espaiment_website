@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EspaiMent – Espacio de bienestar psicológico en Palma</title>
+  <meta name="description" content="Centro de psicología en Palma: terapia para adultos y jóvenes, presencial y online. Un espacio seguro, de escucha y libre de juicios.">
+  <link rel="icon" href="images/favicon.png"> <!-- IMAGE: images/favicon.png (small square icon, e.g. the head logo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <!--
+    =====================================================
+    IMAGE CHECKLIST – put these files in the /images folder
+    (same file names, or edit the src="..." in the HTML)
+      logo.png                 -> logo (used in header + footer, all pages)
+      favicon.png              -> browser tab icon (all pages)
+      hero-bosque.jpg          -> forest photo, Home hero (wide, ~2000px)
+      adultos.jpg              -> Psicología: "adultos" tile
+      jovenes.jpg              -> Psicología: "jóvenes" tile
+      consulta-presencial.jpg  -> Psicología: in-person room photo
+      consulta-online.jpg      -> Psicología: online session photo
+      eva-franco.jpg, marina-manzano.jpg,
+      catalina-plomer.jpg, victoire-caufriez.jpg -> Sobre nosotros portraits (vertical)
+    Tip: JPG, max ~1600px wide, under 300 KB each so pages load fast.
+    =====================================================
+  -->
+</head>
+<body>
+
+<!-- ============ HEADER (same on every page; change aria-current to mark the active page) ============ -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><img src="images/logo.png" alt="EspaiMent – Espacio de bienestar psicológico"></a> <!-- IMAGE: logo.png -->
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+    <ul class="menu">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="psicologia.html">Psicología</a></li>
+      <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO: forest photo + main message ============ -->
+  <section class="hero">
+    <img src="images/hero-bosque.jpg" alt="" fetchpriority="high"> <!-- IMAGE: hero-bosque.jpg (decorative) -->
+    <div class="wrap">
+      <h1>La salida es hacia dentro</h1>
+      <p>Tu espacio seguro, de escucha y de comprensión, libre de juicios.</p>
+      <div class="btns">
+        <a class="btn light" href="contacto.html">Contactar</a>
+        <a class="btn ghost" href="sobre-nosotros.html">Conoce al equipo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WELCOME TEXT ============ -->
+  <section>
+    <div class="wrap welcome">
+      <h2>Bienvenido/a a tu <em>espacio seguro, de escucha, de comprensión</em> y libre de juicios, basado en la confianza y la transparencia.</h2>
+      <p>Gracias a la terapia psicológica y al esfuerzo, lograrás los objetivos que buscas para un futuro más adaptativo y funcional. Adaptando siempre el proceso a tus necesidades y a tu ritmo, será una etapa de aprendizaje y superación.</p>
+    </div>
+  </section>
+
+  <!-- ============ TWO LINK PANELS ============ -->
+  <section style="padding-top:0">
+    <div class="wrap panels">
+      <a class="panel" href="sobre-nosotros.html"><h3>Sobre nosotros</h3><span>Conoce al equipo</span></a>
+      <!-- TODO: when you create terapia-emdr.html, point this link to it -->
+      <a class="panel" href="psicologia.html"><h3>Terapia EMDR</h3><span>¿En qué consiste?</span></a>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE + CONTACT BUTTON ============ -->
+  <section class="band">
+    <div class="wrap">
+      <p>La <b>virtud</b> de <b>pedir ayuda</b>, se alcanza con el <b>valor</b> de <b>aceptarla.</b></p>
+      <div class="btns" style="justify-content:center"><a class="btn light" href="contacto.html">Contactar</a></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER (same on every page) ============ -->
+<footer class="footer">
+  <div class="wrap foot">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="psicologia.html">Psicología</a>
+      <a href="sobre-nosotros.html">Sobre nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="foot-logo">
+      <img src="images/logo.png" alt="EspaiMent"> <!-- IMAGE: logo.png -->
+      <a href="https://www.instagram.com/espaiment/" target="_blank" rel="noopener">Instagram @espaiment</a>
+    </div>
+    <address>
+      <a href="tel:+34698953728">698 953 728</a> / <a href="mailto:espaiment.info@gmail.com">espaiment.info@gmail.com</a><br>
+      Horario consultas: lunes a viernes de 8:30h a 20:00h<br>
+      Carrer del Baró de Pinopar, 7A, 3°A, 07012 Palma, Baleares
+    </address>
+  </div>
+  <p class="copy">© EspaiMent</p>
+</footer>
+
+</body>
+</html>
